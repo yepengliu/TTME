@@ -1,0 +1,202 @@
+{
+  "schema_version": 1,
+  "method": "TTME",
+  "paper_tables": [
+    1,
+    2
+  ],
+  "score_tolerance": {
+    "relative": 1e-12,
+    "absolute": 1e-12
+  },
+  "constructions": [
+    {
+      "task": "ac1",
+      "model": "gpt-oss-120b",
+      "framework": "TTT-Discover",
+      "paper_table": 1,
+      "paper_score": "1.502745",
+      "score": 1.5027450817340204,
+      "direction": "minimize",
+      "search_steps": 50,
+      "discovery_step": 49,
+      "step_indexing": "zero-based",
+      "path": "results/ac1/sequence.json",
+      "array_key": "sequence",
+      "shape": [
+        32000
+      ],
+      "sha256": "ea406814d46037c2b7ddb7d477713ade7b6282d1e50057a410963c7ec58622cf",
+      "raw_dtype": "<f8",
+      "raw_sha256": "450f75624c650fb802024f3b8066ec4b5e989f53a134ae28f569c199f703d4e7",
+      "program": "results/ac1/program.py",
+      "program_sha256": "9f43864b241e24379ce035e74bebad9f9334b16844cc8634971ce904a0b8c6d2"
+    },
+    {
+      "task": "ac2",
+      "model": "gpt-oss-120b",
+      "framework": "TTT-Discover",
+      "paper_table": 1,
+      "paper_score": "0.960784",
+      "score": 0.9607839870598152,
+      "direction": "maximize",
+      "search_steps": 50,
+      "discovery_step": 49,
+      "step_indexing": "zero-based",
+      "path": "results/ac2/sequence.json",
+      "array_key": "sequence",
+      "shape": [
+        65536
+      ],
+      "sha256": "56c0183fe9fac7a32bc63b8d4612786504ab53ff66050cf217c426deb64217ad",
+      "raw_dtype": "<f8",
+      "raw_sha256": "3ff3ac56ca09d85e2b3d380e7e113f07f775273d0539d4cca6bce55bcc2fc9c9",
+      "program": "results/ac2/program.py",
+      "program_sha256": "9e2e4e078e23d2b1b2f7a5eb3baedae6f94dfe6d4fad39bdea03220877910298"
+    },
+    {
+      "task": "erdos",
+      "model": "gpt-oss-120b",
+      "framework": "TTT-Discover",
+      "paper_table": 1,
+      "paper_score": "0.380862",
+      "score": 0.38086154147215684,
+      "direction": "minimize",
+      "search_steps": 50,
+      "discovery_step": 18,
+      "step_indexing": "zero-based",
+      "path": "results/erdos/sequence.json",
+      "array_key": "sequence",
+      "shape": [
+        801
+      ],
+      "sha256": "51b76353bf8ad9ea5133284f1490facf0e85c396bc2bee31e91bd4a468c05d50",
+      "raw_dtype": "<f8",
+      "raw_sha256": "d3fd67e0880a5dc846f1cc19814d1dd114a935f7ab491ba46f90736d575f6290",
+      "program": "results/erdos/program.py",
+      "program_sha256": "3dd12c138d7554bf62af3c9e7f99f57adb1c4ac58e35105478cd3df2edb04769"
+    },
+    {
+      "task": "ac1",
+      "model": "Qwen3-8B",
+      "framework": "TTT-Discover",
+      "paper_table": 1,
+      "paper_score": "1.504329",
+      "score": 1.504328765067039,
+      "direction": "minimize",
+      "search_steps": 50,
+      "discovery_step": 39,
+      "step_indexing": "zero-based",
+      "path": "results/qwen3-8b/ac1/sequence.json",
+      "array_key": "sequence",
+      "shape": [
+        1000
+      ],
+      "sha256": "9662d8060f52165e186626dd7469105f4e41cc00bec246885c8040a42c8d24e5",
+      "raw_dtype": "<f8",
+      "raw_sha256": "c0e6bebd6456be554ad3d1525ddb1a2438e5ab7e80a630b3827a3b73305ffa61"
+    },
+    {
+      "task": "ac2",
+      "model": "Qwen3-8B",
+      "framework": "TTT-Discover",
+      "paper_table": 1,
+      "paper_score": "0.949248",
+      "score": 0.949247991087857,
+      "direction": "maximize",
+      "search_steps": 50,
+      "discovery_step": 47,
+      "step_indexing": "zero-based",
+      "path": "results/qwen3-8b/ac2/sequence.json",
+      "array_key": "sequence",
+      "shape": [
+        4096
+      ],
+      "sha256": "41cb20473286e95335404ee6fba7732a6177609e537a18ba6a726f3d96aa9f2a",
+      "raw_dtype": "<f8",
+      "raw_sha256": "fb8a36d45512c310f0ea25ce44b7524f2b1e2f892fbf65ced2cb525e4076c218"
+    },
+    {
+      "task": "erdos",
+      "model": "Qwen3-8B",
+      "framework": "TTT-Discover",
+      "paper_table": 1,
+      "paper_score": "0.380927",
+      "score": 0.38092716805644194,
+      "direction": "minimize",
+      "search_steps": 50,
+      "discovery_step": 34,
+      "step_indexing": "zero-based",
+      "path": "results/qwen3-8b/erdos/sequence.json",
+      "array_key": "sequence",
+      "shape": [
+        200
+      ],
+      "sha256": "3b7ba699da5c9204323619e497c9558b69c2f267155bdd1a630d6916c1ebae3b",
+      "raw_dtype": "<f8",
+      "raw_sha256": "324244c0709e339d5af726809b688e560df7575fa1db1b61690a7e1ebd844ae8"
+    },
+    {
+      "task": "ac2",
+      "model": "Distill-Qwen3-8B",
+      "framework": "ThetaEvolve",
+      "paper_table": 2,
+      "paper_score": "0.948148",
+      "score": 0.9481478773692517,
+      "direction": "maximize",
+      "search_steps": 65,
+      "discovery_step": 52,
+      "step_indexing": "zero-based",
+      "path": "results/thetaevolve/ac2/sequence.json",
+      "array_key": "sequence",
+      "shape": [
+        4096
+      ],
+      "sha256": "6d79470abe3faf3dced9195ce72026a58d0bfbd641d1746f8fb416fc9b786865",
+      "raw_dtype": "<f8",
+      "raw_sha256": "d01cb6d3b0ef751654c3a98d18baf79610aa8e74d7af7b1e8eeffad488f6d382"
+    },
+    {
+      "task": "ac3",
+      "model": "Distill-Qwen3-8B",
+      "framework": "ThetaEvolve",
+      "paper_table": 2,
+      "paper_score": "1.464224",
+      "score": 1.4642242995825168,
+      "direction": "minimize",
+      "search_steps": 65,
+      "discovery_step": 63,
+      "step_indexing": "zero-based",
+      "path": "results/thetaevolve/ac3/sequence.json",
+      "array_key": "sequence",
+      "shape": [
+        100
+      ],
+      "sha256": "e02e28427d5fe707e90ab2155a3b57a4529f82d36e4c56fbf02ad83fb1e61fd6",
+      "raw_dtype": "<f8",
+      "raw_sha256": "3ca92109febba046e09447c518929f749d3d92542b119f352c078f44f706e5ae"
+    },
+    {
+      "task": "hadamard",
+      "model": "Distill-Qwen3-8B",
+      "framework": "ThetaEvolve",
+      "paper_table": 2,
+      "paper_score": "0.579938",
+      "score": 0.5799382051425527,
+      "direction": "maximize",
+      "search_steps": 65,
+      "discovery_step": 62,
+      "step_indexing": "zero-based",
+      "path": "results/thetaevolve/hadamard/matrix.json",
+      "array_key": "matrix",
+      "shape": [
+        29,
+        29
+      ],
+      "sha256": "49fe5951a11d5b472a95b62de9e835d022cd843d11bd0ea163ea0d75cc296076",
+      "raw_dtype": "|i1",
+      "raw_sha256": "9f58f01fe046daa8e62a8b265fc393db6a300bd7f6e6073c7748d15988fd8bf9",
+      "absolute_determinant": "736926518386354028544"
+    }
+  ]
+}

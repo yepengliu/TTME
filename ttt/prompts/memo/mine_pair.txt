@@ -1,0 +1,14 @@
+## PARENT PROGRAM (score {pscore})
+```python
+{pcode}
+```
+
+## CHILD PROGRAM (score {cscore}, better)
+```python
+{ccode}
+```
+
+## DIFF (parent -> child)
+```diff
+{diff}
+```

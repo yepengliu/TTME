@@ -1,0 +1,13 @@
+# Direct dependencies at the versions the reported runs used; pip resolves their own dependencies.
+# Core
+numpy==2.2.6
+PyYAML==6.0.1
+requests==2.32.5
+# Imported by candidate programs (extra "programs")
+scipy==1.15.3
+cvxpy==1.7.5
+tqdm==4.67.3
+# Generation server (extra "serve")
+vllm==0.22.0
+# Tests (extra "test")
+pytest==7.4.3

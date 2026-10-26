@@ -1,0 +1,9 @@
+task: ac2
+model: 8b-chatml
+search:
+  steps: 50
+  parents_per_step: 8
+  children_per_parent: 64
+eval:
+  timeout_s: 1100
+  cpus: 1

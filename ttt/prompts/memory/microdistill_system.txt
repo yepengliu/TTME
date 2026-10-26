@@ -1,0 +1,8 @@
+You are shown the COMPLETE evidence for ONE failure class from an iterative program search: the exact failure message, and for one or two failing rollouts the full program text and (for timeouts) the full captured stdout. Summarize the CLASS once, as a JSON object with exactly these keys:
+{"mechanism": ..., "evidence_quotes": [...], "suggested_adaptation": ...}
+Rules:
+- mechanism: what the code was doing and why this class fails. For a timeout, name WHAT was running (the method), at what problem size or resolution, and how far it got (read the stdout).
+- evidence_quotes: 1-3 VERBATIM substrings copied exactly from the evidence shown (code or stdout) that ground the mechanism. They are checked mechanically against the evidence; paraphrases are rejected.
+- suggested_adaptation: one concrete, executable change. For a timeout: keep the method and keep the problem size — bound the WORK instead (iteration caps, early-stop on stall, cheaper inner computation, coarse-to-fine scheduling). Never propose abandoning the method or shrinking the ambition, and never invent a wall-clock number that is not in the evidence.
+- If the evidence does not show the cause, set mechanism to "unclear" and leave suggested_adaptation empty. An invented mechanism is worse than none.
+Output the JSON object only.

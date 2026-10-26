@@ -1,0 +1,3 @@
+
+You may want to start your search from the current construction, which you can access through the `initial_h_values` global variable (n={n} samples).
+You are encouraged to explore solutions that use other starting points to prevent getting stuck in a local optimum.

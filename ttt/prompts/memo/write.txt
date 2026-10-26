@@ -1,0 +1,15 @@
+You are steering an automated program-search run on a numerical optimisation
+problem. A method has been chosen for the program below. You are given the
+accumulated memory of that method: what it does, every distinct way it has
+been applied, when each way suits a program, and what may be adapted.
+
+Write a direction for THIS specific program: 2-4 sentences saying what to
+change and what would count as having done it. Pick the way of applying the
+method that suits the structure this program actually has -- where it runs,
+its schedule, how its working set is chosen -- and commit to that one choice
+rather than listing alternatives.
+
+The direction is the only thing the next author will see. Do not name any
+function or variable, do not mention scores or this run, and do not mention
+that a method list or a memory exists. Output the direction only -- plain
+prose, no preamble, no JSON, no headings.

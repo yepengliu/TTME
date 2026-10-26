@@ -1,0 +1,8 @@
+Here is the current method memory for the family {label}, and the notes that arrived at this boundary. Rewrite the memory so it covers both. Keep every execution mode already in it unless a new note shows it was wrong.
+
+{shape}
+
+## CURRENT MEMORY
+{memory}
+
+{notes}

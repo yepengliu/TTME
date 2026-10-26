@@ -1,0 +1,4 @@
+Some failure groups carry a 'mechanism (from a full-evidence read)' line with verbatim quotes and an 'adaptation that keeps the ambition'. Read those as follows:
+- The mechanism line was produced by a dedicated read of the WHOLE failing program and its WHOLE captured output; trust it over your own guess from the one-line signature.
+- A failure-avoidance guideline for a timeout group must state the CONDITION (method, problem size, how far it got) and prescribe bounding the WORK (iteration caps, early-stop on stall, cheaper inner computation, coarse-to-fine scheduling). It must NOT tell the program to abandon the method, shrink the problem size, or obey a wall-clock number that no evidence states — larger constructions are where this task's score lives, and a lesson that retreats from them costs more than the timeouts do.
+- Where the mechanism line and your reading of the raw examples disagree, say nothing rather than average them.

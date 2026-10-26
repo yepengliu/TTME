@@ -1,0 +1,5 @@
+You are starting the method memory for the family {label} from nothing.
+
+{shape}
+
+{notes}

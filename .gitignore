@@ -1,0 +1,25 @@
+# Run outputs
+runs/
+logs/
+pools/
+models/
+*.vllm.log
+# results/ is part of the release: nothing above hides files under it.
+!/results/**
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Build artefacts
+build/
+dist/
+/out/
+*.whl
+*.egg-info/
+
+# Caches
+__pycache__/
+*.py[cod]
+.pytest_cache/

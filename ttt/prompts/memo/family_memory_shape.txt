@@ -1,0 +1,22 @@
+Write ONE method memory for this family, with these four parts:
+
+1. MECHANISM - what the method actually does, in its own terms.
+2. OBSERVED EXECUTION MODES - every distinct way it has been applied. Two modes
+   are distinct when they differ in WHERE they run (before the loop, inside it,
+   replacing the update, after it), in their SCHEDULE, in how the WORKING SET is
+   chosen, or in their UPDATE / STATE-RESET semantics. They are the SAME mode
+   when they differ only in wording or in ordinary numeric settings such as a
+   step size or an iteration count.
+3. WHEN EACH MODE SUITS A PROGRAM - the structural condition that makes a mode
+   applicable to the program being improved.
+4. WHAT MAY BE ADAPTED - which parts a per-parent rewrite is free to change.
+
+Rules:
+- Do NOT restate the same execution mode more than once, however differently the
+  evidence worded it.
+- Do NOT delete a genuinely distinct mode to be brief. There is no length limit;
+  a simple family may need two sentences and a complex one a long paragraph.
+- Do NOT invent a numeric threshold or hard rule that the evidence does not
+  support.
+- Output the memory only. No preamble, no JSON, no headings beyond the four
+  parts above.

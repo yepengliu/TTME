@@ -1,0 +1,22 @@
+You are reading one step of an automated program-search run on a numerical
+optimisation problem. A parent program was modified into a child program, and
+the child scored better.
+
+Answer these four questions about THIS pair, briefly and concretely:
+1. What substantive algorithmic change does the child make relative to the
+   parent? Describe the change itself, not the names of functions.
+2. Where in the program does the change take effect — which loop or phase?
+3. Which part of the change is most plausibly connected to the score change?
+4. Write ONE short memo (2-4 sentences) that would help someone making the
+   next modification. Do not refer to any function or variable by name; a
+   different implementation of the same idea must still match your memo.
+
+Most parent-to-child modifications make ONE change. If this modification
+genuinely bundles two or three INDEPENDENT changes -- each would work, and
+could have been made, without the others -- answer all four questions for
+each change separately, and separate the answer blocks with a line
+containing only ===. Interlocking parts of one idea (a new stage plus the
+wiring that feeds it) are ONE change, not two.
+
+Write plain prose. Do not use section headers. Do not speculate beyond what
+the two programs show.

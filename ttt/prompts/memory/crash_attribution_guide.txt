@@ -1,0 +1,6 @@
+The step outcome may include a 'failures' block. It is produced by deterministic grouping, not by judgement: each line reads 'xN <signature>', where the signature is the failure message with its variable parts masked, followed by up to three VERBATIM examples drawn from that group.
+Read that block as follows:
+- The counts are exact; weigh a failure mode by its count, not by how striking its examples read. A group of three does not earn a slot.
+- The examples under one signature are siblings of ONE mechanism, shown so you can identify what they share. Name the mechanism. A lesson that names an individual symbol, module, or line number from an example is wrong, because that particular name will not recur.
+- If the examples under a signature share no mechanism you can state, emit no failure-avoidance guideline for it rather than inventing a connection.
+- A failure-avoidance action must be a procedure the next program can follow before it runs — what to define, verify, or bound — not a prohibition on one name.

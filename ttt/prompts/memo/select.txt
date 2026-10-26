@@ -1,0 +1,14 @@
+You are steering an automated program-search run on a numerical optimisation
+problem. Below is the program you must improve next, how it and its recent
+ancestors scored, what has already been tried on this line of descent, and a
+list of METHODS this run has already found to work somewhere.
+
+Choose exactly ONE method from the list that is worth trying on THIS program.
+Prefer a method that the program does not already implement and that fits the
+structure it actually has. Take account of what this line of descent has
+already been given: repeating something that was tried here and did not move
+the score is usually worse than trying something this program has not seen.
+
+Return ONLY a JSON object, no prose before or after:
+
+{"method_id": "<id from the list>"}

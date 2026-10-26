@@ -1,0 +1,98 @@
+Below are the METHODS already known from an automated program-search run, if
+any (each "EXISTING", with a label and a direction), and some NEW notes, each
+describing one change that was just made to a program.
+
+The list of EXISTING methods was built up one note at a time and was never
+consolidated, so it very probably contains several entries that are the same
+method written in different words. Your main job is to find those.
+
+The test, and the only test — the SUB-PROBLEM being solved:
+
+  Two entries are the SAME method when the computation at their core is the
+  same one: the same quantity is being optimised, over the same unknowns,
+  subject to the same kind of restriction, and the answer is used in the same
+  way afterwards.
+
+  They are STILL the same method when they differ in any of these:
+    * how much of the problem each one looks at when it runs,
+    * where in the program the work happens, and how often,
+    * how expensive it is,
+    * what else the same edit happens to change alongside it.
+  Those are variants of one method. Group them together.
+
+  They are DIFFERENT methods only when the core computation itself differs —
+  a different quantity optimised, different unknowns, or a different kind of
+  restriction.
+
+  ⚠ Do NOT decide by asking whether both could be applied at once. Two
+  placements of the same core computation can both be applied and still be one
+  method; "they stack" is not evidence that they differ.
+
+  A change that also alters something else still belongs with the method whose
+  core computation it shares. Keep what else it alters in that entry's own
+  words, not in the group's.
+
+  ⚠ Many notes describe a pipeline: "after stage X, do Y", "replace X with
+  Y", "before Z, insert Y". Place such a note by the computation it
+  INTRODUCES or CHANGES — Y — never by the surrounding stages it merely
+  mentions. That a note names an existing method's stage as its location is
+  not evidence that it belongs to that method.
+
+  ⚠ Adding a note to a group must leave the group still describable as ONE
+  core computation. If, after adding the note, the group's direction could
+  only be written as a list of alternatives, the note was not a variant of
+  that method: place it on another method, or alone.
+
+Work through it in two passes.
+
+  PASS ONE — go over the EXISTING methods and find every group of two or more
+  that fail the test above, i.e. that would lead to the same change. Report
+  each such group. Compare every entry against every other, not just its
+  neighbours in the list: entries describing one method can be far apart and
+  worded very differently.
+
+  PASS TWO — place each NEW note: into one of the groups from pass one, or
+  onto a single existing method it matches, or alone if its change is unlike
+  everything else.
+
+  For a NEW note you are placing ALONE, first name the EXISTING method it comes
+  closest to and say what separate work each one would still do. Put that id in
+  `closest`. "Nothing is close" is an answer, but say which id was nearest.
+
+Then:
+
+  * Every NEW note must appear exactly once.
+  * An EXISTING method that you are not merging or adding to should simply be
+    left out. Listing it alone changes nothing.
+  * An EXISTING method must never be split apart. Its id appears once, whole,
+    or not at all.
+  * Two entries with the same label are the same method. If a NEW note restates
+    an EXISTING method, put them in one group; do not create a second entry
+    under a label that is already in the list.
+  * Use ONLY ids that appear above. An id you have not seen in this prompt --
+    for example the next unused E number -- does not exist. A NEW note that
+    needs a brand-new method goes in a group with ONLY its N id and no E id;
+    never invent an id for it.
+
+Judge by the change itself, not by wording, length, phrasing, or which program
+an entry mentions. Do not aim for any particular number of groups; do not
+merge things just to reduce the count, and do not keep things apart just
+because they are worded differently.
+
+For each group you report, write a label (5-8 words) and ONE actionable
+direction, in 2-4 sentences, for whoever makes the next modification. Say what
+that group's entries agree on, concretely enough that someone could tell
+whether a new piece of code follows it. Describe what the entries actually
+compute, not what it resembles: do not restate it in terms of a quantity or a
+property the code never forms. Do not refer to any function or
+variable by name — a different implementation of the same idea must still
+match it. Do not mention scores, timings, or how many entries agree.
+
+Return ONLY a JSON object, no prose before or after:
+
+{"groups": [
+  {"ids": ["E0", "E4", "N2"], "label": "<5-8 words>",
+   "direction": "<2-4 sentences>"},
+  {"ids": ["N5"], "closest": "E3", "label": "<5-8 words>",
+   "direction": "<2-4 sentences>"}
+]}

@@ -1,0 +1,4 @@
+## Assigned direction
+Direction ID: {tag}
+
+{body}

@@ -1,0 +1,4 @@
+## Assigned direction
+Direction ID: DEEPEN
+
+Stay with what this program already is: the same kind of candidate, the same initialization, and the methods that actually run. Make one coherent change that makes what already runs more accurate, more stable, or more efficient. Aim inside the main loop: its schedule, how much of the problem each update looks at, the cost of its inner computations, and how time is divided among the parts that actually run. Removing code you can tell never runs also counts. Do not revive or add another optimization method — deepening a running one is the point — and do not change what a candidate solution is or how large it is. Preserve the required interface and validity constraints.

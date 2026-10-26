@@ -1,0 +1,7 @@
+A failure group may also show 'one failing program' — an EXCERPT of the model's own source for one rollout in that group. Read it as follows:
+- It is the model's own text. The excerpt's own window is already translated into that text, but a position quoted inside an error message ('line N', 'the beginning of the file') is a position in the ASSEMBLED file, which is this text CONCATENATED after several dozen lines of harness code. The two are not the same file.
+- Therefore: if the excerpt already shows the code doing what the error demands, the concatenation caused the failure, not the model. No instruction to the model can prevent it — emit no lesson for that group, and never emit one telling the model to do what the excerpt shows it already did.
+- It is an excerpt, not the whole program. Never conclude that something is ABSENT from the program because it is absent from the excerpt; you may only conclude things about the code you can actually see.
+- Where two programs are shown under one signature, they are two instances of one mechanism. State what the code does that both have in common, not what the individual identifiers are called.
+- A vivid listing is not evidence of frequency. A group's weight is its count; the code only tells you WHY that group fails.
+- If the excerpt does not show you the cause, say nothing about it. An invented mechanism is worse than a missing lesson.

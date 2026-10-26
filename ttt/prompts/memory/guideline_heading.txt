@@ -1,0 +1,1 @@
+## Guideline Memory — run-wide guidelines ([seen N] = recurrence within this run, not independent confirmation)

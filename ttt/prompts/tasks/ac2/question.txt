@@ -1,0 +1,33 @@
+'Act as an expert software developer and inequality specialist specializing in creating step functions with certain properties.
+
+Your task is to generate the sequence of non-negative heights of a step functions, that maximizes the following evaluation function:
+
+```python
+{shown_verifier}
+```
+
+{literature}
+Your task is to write a search function, construct_function(), that searches for the best sequence of coefficients. Your function will have {budget_s} seconds to run, and after that it has to have returned the best sequence it found. If after {budget_s} seconds it has not returned anything, it will be terminated with negative infinity points. All numbers in your sequence have to be positive or zero. Larger sequences with {budget_s}s of items often have better attack surface, but too large sequences with 100s of thousands of items may be too slow to search.
+
+You may code up any search method you want, and you are allowed to call the evaluate_sequence() function as many times as you want. You have access to it, you don't need to code up the evaluate_sequence() function.
+
+{state_ctx}
+
+You may want to start your search from one of the constructions we have found so far, which you can access through the 'height_sequence_1' global variable. 
+However, you are encouraged to explore solutions that use other starting points to prevent getting stuck in a local minimum.
+
+Reason about how you could further improve this construction.
+Ideally, try to do something different than the above algorithm. Could be using different algorithmic ideas, adjusting your heuristics, adjusting / sweeping your hyperparemeters, etc. 
+Unless you make a meaningful improvement, you will not be rewarded, if you are stuck you should think about how to get unstuck.
+
+Rules:
+- You must define the `construct_function` function as this is what will be invoked.
+- You can use scientific libraries like scipy, numpy, cvxpy[CBC,CVXOPT,GLOP,GLPK,GUROBI,MOSEK,PDLP,SCIP,XPRESS,ECOS], math.
+- You can use up to 2 CPUs.
+- Make all helper functions top level and have no closures from function nesting. Don't use any lambda functions.
+- No filesystem or network IO.
+- Do not import evaluate_sequence yourself. Assume it will already be imported and can be directly invoked. Do not import height_sequence_1 yourself; it will already be available.
+- **Print statements**: Use `print()` to log progress, intermediate bounds, timing info, etc. Your output will be shown back to you.
+- Include a short docstring at the top summarizing your algorithm.
+
+Make sure to think and return the final program between ```python and ```.

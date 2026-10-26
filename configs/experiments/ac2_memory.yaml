@@ -1,0 +1,19 @@
+task: ac2
+model: gpt-oss-120b
+search:
+  steps: 50
+  parents_per_step: 8
+  children_per_parent: 64
+eval:
+  timeout_s: 1100
+  cpus: 1
+memory: {}
+memo:
+  select: parallel
+  control_card: deepen_v2
+  notes_per_boundary: 12
+  stepbest_reserve: 0
+  include_refused: false
+  budgets:
+    stage1_budget_s: 240
+    mining_budget_s: 300

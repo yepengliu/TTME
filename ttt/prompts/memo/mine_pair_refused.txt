@@ -1,0 +1,14 @@
+## PARENT PROGRAM (score {pscore})
+```python
+{pcode}
+```
+
+## CHILD PROGRAM (score {cscore}, better than parent, but ARCHIVE-REFUSED: its construction length {length} is outside the admission window [{lo}, {hi}], so this exact output is NOT a valid result. The lesson is the METHOD; any reuse must produce a construction with length inside [{lo}, {hi}].)
+```python
+{ccode}
+```
+
+## DIFF (parent -> child)
+```diff
+{diff}
+```

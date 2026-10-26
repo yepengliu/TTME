@@ -1,0 +1,39 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ttt"
+version = "0.1.0"
+readme = "README.md"
+requires-python = ">=3.10"
+license = "MIT AND Apache-2.0"
+license-files = ["LICENSE", "NOTICE", "LICENSES/*"]
+dependencies = [
+  "numpy>=2.0",
+  "pyyaml>=6.0",
+  "requests>=2.31",
+]
+
+[project.optional-dependencies]
+# Imported by the generated candidate programs, so needed wherever programs are evaluated.
+programs = ["scipy>=1.13", "cvxpy>=1.5", "tqdm>=4.66"]
+serve = ["vllm>=0.22"]
+test = ["pytest>=7.4"]
+
+[project.scripts]
+ttt = "ttt.cli:main"
+
+[tool.setuptools]
+# The wheel holds the package and its prompt files only (package-data below); MANIFEST.in adds
+# configs/, scripts/, results/, tests/ and the license and lock files to the sdist.
+include-package-data = false
+
+[tool.setuptools.packages.find]
+include = ["ttt*"]
+
+[tool.setuptools.package-data]
+ttt = ["prompts/**/*.txt"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

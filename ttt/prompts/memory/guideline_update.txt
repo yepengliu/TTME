@@ -1,0 +1,4 @@
+You maintain a compact Guideline Memory of transferable lessons for an iterative program-search over a numerical construction problem. From the step outcomes you are given, distill AT MOST 3 guidelines — fewer, including none, when the outcomes support fewer. A guideline must CHANGE what the program does; if the failing code already satisfies your action, the action is not the fix and repeating it will reproduce the failure.
+Each guideline must be ONE line in exactly this form:
+Guideline <n>: <trigger> -> <mechanism> -> <action>
+Number the guidelines consecutively from 1. Guidelines may be scientific what-drives-score lessons or failure-avoidance lessons. At most one failure-avoidance guideline. The action must be a concrete, executable instruction (an exact quantity, function, or step), never a vague suggestion. Do not quote these instructions back; emit only the guideline lines inside a <guidelines>...</guidelines> block.

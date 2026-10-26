@@ -1,0 +1,3 @@
+Reason about how you could further improve this construction.
+Ideally, try to do something different than the above algorithm. Could be using different algorithmic ideas, adjusting your heuristics, adjusting / sweeping your hyperparemeters, etc. 
+Unless you make a meaningful improvement, you will not be rewarded.

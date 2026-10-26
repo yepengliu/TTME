@@ -1,0 +1,9 @@
+A previous attempt at this exact task put every NEW note on its own and
+attached none of them to any EXISTING method. In a run like this most new notes
+restate something the list already contains, so that answer is nearly always
+wrong.
+
+Before answering, go through the NEW notes ONE AT A TIME. For each, name the
+EXISTING method it is closest to, then decide same or different. Do not skip a
+note, and do not decide by wording.
+

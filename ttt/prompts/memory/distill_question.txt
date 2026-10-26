@@ -1,0 +1,9 @@
+{instruction}
+
+## CURRENT playbook
+{memory}
+
+## THIS STEP
+{summary}
+
+Emit the updated lessons now.
