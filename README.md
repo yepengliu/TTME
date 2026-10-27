@@ -129,16 +129,11 @@ If you find this repository useful for your research or applications, please cit
 
 
 ```bibtex
-@misc{liu2026ttme,
-  title         = {Can Test-Time Memory Evolution Outperform Test-Time Training
-                   for Scientific Discovery?},
-  author        = {Liu, Yepeng and Chen, Shengmai and Zhao, Xuandong and Liu, Chengzhi
-                   and Song, Dawn and Wang, Xin Eric and Bu, Yuheng},
-  year          = {2026},
-  eprint        = {2610.32046},
-  archivePrefix = {arXiv},
-  primaryClass  = {cs.AI},
-  url           = {https://arxiv.org/abs/2610.32046}
+@article{liu2026ttme,
+  title={Can Test-Time Memory Evolution Outperform Test-Time Training for Scientific Discovery?},
+  author={Liu, Yepeng and Chen, Shengmai and Zhao, Xuandong and Liu, Chengzhi and Song, Dawn and Wang, Xin Eric and Bu, Yuheng},
+  journal={arXiv preprint arXiv:2610.32046},
+  year={2026}
 }
 ```
 
