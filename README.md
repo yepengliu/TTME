@@ -125,10 +125,8 @@ Run evaluation workers in a container or under a separate account; see the
 
 ## Citation
 
-If you use TTME, please cite the paper.
+If you find this repository useful for your research or applications, please cite our paper:
 
-<details>
-<summary>BibTeX</summary>
 
 ```bibtex
 @misc{liu2026ttme,
@@ -144,7 +142,6 @@ If you use TTME, please cite the paper.
 }
 ```
 
-</details>
 
 ## Acknowledgments and license
 
