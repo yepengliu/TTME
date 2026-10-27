@@ -27,9 +27,18 @@
   <a href="#citation">Citation</a></sub>
 </p>
 
-**Test-Time Memory Evolution (TTME)** adapts external memory during scientific
-discovery while keeping model weights fixed. It turns execution feedback into practical
-guidelines and successful algorithmic ideas into reusable search strategies.
+**Test time (TT)** is the stage when a pretrained model is used to solve a target
+problem. In scientific discovery, this can involve repeated rounds of generating
+programs and evaluating the constructions they produce.
+
+**Test-Time Training (TTT)** adapts model weights during this process. In the
+frameworks studied in our [paper](https://arxiv.org/abs/2610.32046), evaluation
+feedback drives online reinforcement learning updates, which add computational
+cost to the search.
+
+**Test-Time Memory Evolution (TTME)** adapts external memory at test time while
+keeping model weights fixed. It turns execution feedback into practical guidelines
+and successful algorithmic ideas into reusable search strategies.
 
 ## Overview
 
