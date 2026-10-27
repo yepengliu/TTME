@@ -1,6 +1,5 @@
-<h1 align="center">TTME</h1>
 
-<h3 align="center">Can Test-Time Memory Evolution Outperform<br>Test-Time Training for Scientific Discovery?</h3>
+<h1 align="center">Can Test-Time Memory Evolution Outperform Test-Time Training for Scientific Discovery?</h1>
 
 <p align="center">
   <b>Yepeng Liu<sup>*</sup></b>, <b>Shengmai Chen<sup>*</sup></b>, Xuandong Zhao, Chengzhi Liu,<br>
