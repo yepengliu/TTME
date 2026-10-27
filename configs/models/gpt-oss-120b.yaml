@@ -1,0 +1,4 @@
+format: harmony_two_phase
+phase1_max_tokens: 26000
+reasoning_effort: high
+date: "2026-07-24"

@@ -1,0 +1,5 @@
+format: chatml_think
+aux:
+  distill_max_tokens: 8192
+  microdistill_max_tokens: 4096
+  memo_max_tokens: 9000

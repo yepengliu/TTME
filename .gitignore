@@ -1,8 +1,8 @@
 # Run outputs
 runs/
 logs/
-pools/
-models/
+/pools/
+/models/
 *.vllm.log
 # results/ is part of the release: nothing above hides files under it.
 !/results/**

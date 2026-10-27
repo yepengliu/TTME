@@ -51,13 +51,13 @@ ttt score ac2 results/ac2/sequence.json
 ttt score erdos results/erdos/sequence.json
 ```
 
-## Generator snapshots
+## Generated programs
 
 The `program.py` files next to the three gpt-oss-120b arrays are the corresponding
-generated program snapshots. They use the task harness's injected parent and
-verifier, and may depend on random choices or wall-clock budgets. Use the stored
+generated programs. The evaluation code supplies their parent construction and
+scoring function. Their outputs may depend on random choices or execution time limits. Use the stored
 arrays to reproduce the reported scores; rerunning an optimizer can return a
-different construction. The manifest hashes each included program snapshot.
+different construction. The manifest records a hash for each included program.
 
 This collection covers the main TTME rows. Baseline and ablation constructions,
 intermediate candidates and results beyond the reported search budgets are not
