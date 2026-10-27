@@ -35,8 +35,8 @@ On a single machine that does both, install all three extras into one environmen
 
 ## Configs
 
-An experiment is one YAML file in `configs/experiments/`; the model config it names is in
-`configs/models/` (see [Models](#models)).
+Each experiment has a YAML file in `configs/experiments/`. The file names a model
+configuration in `configs/models/` (see [Models](#models)).
 
 For each task (`ac1`, `ac2`, `erdos`):
 
@@ -49,13 +49,15 @@ For each task (`ac1`, `ac2`, `erdos`):
 | `<task>_memory_recipe_only` | Parent program's change history only |
 | `<task>_baseline_8b`, `<task>_memory_8b` | Same settings, using Qwen3-8B |
 
-When memory is enabled, the prompt also includes a brief history of changes leading
-to the selected parent program, with the scores before and after each change.
+When memory is enabled, the prompt also includes the change history of the selected
+parent program. This history includes the scores before and after each change.
 In experiment filenames, `memo` refers to Strategy Memory.
 
-Every experiment runs 50 steps of 8 parents × 64 children, with a 1100 s limit and one CPU per
-program. Unknown keys and inconsistent settings are rejected when a config is loaded. The model
-weights are not part of a config: you pass the path when you start the servers.
+Each experiment runs for 50 steps. Each step uses 8 parents and generates 64 children
+per parent. Each program has a 1100 s time limit and one CPU.
+The configuration loader rejects unknown keys and inconsistent settings.
+Configuration files do not contain model weights. Pass the path to the model weights
+when you start the servers.
 
 ## Models
 
@@ -64,14 +66,16 @@ weights are not part of a config: you pass the path when you start the servers.
 | `configs/models/gpt-oss-120b.yaml` | Hugging Face `openai/gpt-oss-120b` | `b5c939de8f754692c1647ca79fbf85e8c1e70f8a` | harmony, two-phase completion |
 | `configs/models/8b-chatml.yaml` | Hugging Face `Qwen/Qwen3-8B` | `b968826d9c46dd6066d109eabc6255188de91218` | ChatML with a `<think>` block, single-phase completion |
 
-The reported runs used these snapshots at these revisions, served with vLLM 0.22.0 (the version
-pinned in `requirements.lock`). Download the revision and pass its local directory as `MODEL_PATH`;
-a bare hub id makes vLLM fetch the latest revision instead.
+The reported runs used these model revisions with vLLM 0.22.0. This vLLM version is
+specified in `requirements.lock`. Download the specified model revision. Set
+`MODEL_PATH` to its local directory. If you supply only a hub ID, vLLM downloads the
+latest revision.
 
 ## Run on one machine
 
-`scripts/local/run_local.sh` starts one vLLM server on a free local port, waits until it is
-healthy, runs the experiment with local sandbox workers and stops the server at the end.
+`scripts/local/run_local.sh` starts one vLLM server on a free local port. The script
+waits until the server is ready. It then runs the experiment with local sandbox
+workers. When the experiment ends, the script stops the server.
 
 ```bash
 export MODEL_PATH=models/gpt-oss-120b   # downloaded snapshot directory
@@ -122,9 +126,9 @@ placeholders (`YOUR_ACCOUNT`, `YOUR_QOS`, `YOUR_CPU_PARTITION`, `YOUR_GPU_PARTIT
    The run's output is in `RUN_DIR/run`; job logs are in `RUN_DIR/logs`.
 
 Workers that start later join the run automatically. When the driver finishes, the GPU job stops.
-If the GPU job fails, the driver gives up; resubmit with `RESUME=1`. `touch POOL_DIR/STOP` ends
-every worker of a pool. Paths must not contain commas, because they are passed through
-`sbatch --export`.
+If the GPU job fails, the driver stops. Resubmit the run with `RESUME=1`.
+Run `touch POOL_DIR/STOP` to stop all workers in the pool.
+Paths must not contain commas because `sbatch --export` uses commas to separate values.
 
 ## Run `ttt run` directly
 
@@ -189,6 +193,6 @@ pytest
 ## Safety
 
 Evaluation runs model-written Python with the permissions of the account that runs the workers.
-The sandbox limits time and output size and cleans up processes, but it does not isolate
-programs from the filesystem or the network. Run workers in a container or under a separate
-account.
+The sandbox limits execution time and output size. It also cleans up processes.
+It does not isolate programs from the filesystem or the network.
+Run workers in a container or under a separate account.

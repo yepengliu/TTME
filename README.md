@@ -27,18 +27,17 @@
   <a href="#citation">Citation</a></sub>
 </p>
 
-**Test time (TT)** is the stage when a pretrained model is used to solve a target
-problem. In scientific discovery, this can involve repeated rounds of generating
-programs and evaluating the constructions they produce.
+**Test time (TT)** is the stage when a pretrained model solves a target problem.
+In scientific discovery, the model generates candidate programs. The system runs
+these programs and evaluates the resulting constructions.
 
-**Test-Time Training (TTT)** adapts model weights during this process. In the
-frameworks studied in our [paper](https://arxiv.org/abs/2610.32046), evaluation
-feedback drives online reinforcement learning updates, which add computational
-cost to the search.
+**Test-Time Training (TTT)** updates model weights at test time. In the frameworks
+studied in our [paper](https://arxiv.org/abs/2610.32046), reinforcement learning uses
+evaluation results to update the weights. These updates require additional computation.
 
-**Test-Time Memory Evolution (TTME)** adapts external memory at test time while
-keeping model weights fixed. It turns execution feedback into practical guidelines
-and successful algorithmic ideas into reusable search strategies.
+**Test-Time Memory Evolution (TTME)** updates external memory at test time. The model
+weights remain fixed. TTME uses execution feedback to update practical guidelines.
+It stores and adapts successful strategies to guide later searches.
 
 ## Overview
 
@@ -46,12 +45,12 @@ and successful algorithmic ideas into reusable search strategies.
   <img src="docs/assets/overview.png" width="850" alt="Figure 2 from the paper: test-time training updates model weights, while TTME updates external memory within the same discovery loop.">
 </p>
 
-<p align="center"><sub>Figure 2 from the paper. Both methods retain the discovery framework; TTME adapts the memory used to guide generation.</sub></p>
+<p align="center"><sub>Figure 2 from the paper. TTME and TTT use the same discovery framework. TTME updates external memory to guide program generation.</sub></p>
 
-TTME maintains two complementary memories:
+TTME uses two types of memory:
 
-- **Guideline Memory** distills execution and evaluation feedback into shared lessons for implementing reliable candidates.
-- **Strategy Memory** consolidates successful algorithmic ideas and adapts relevant strategies for subsequent search.
+- TTME uses execution and evaluation feedback to update **Guideline Memory**. These guidelines help the model write valid programs.
+- TTME stores successful algorithmic ideas in **Strategy Memory**. TTME adapts relevant strategies for later searches.
 
 ## Results
 
@@ -82,8 +81,8 @@ See the [construction catalog](results/README.md) for each array and its provena
 
 ### Verify the constructions
 
-With Python 3.10 or newer, these commands reproduce the stored construction scores
-on a CPU. No model download is required.
+Use Python 3.10 or newer. Run the following commands to reproduce the stored
+construction scores on a CPU. You do not need to download a model.
 
 ```bash
 git clone https://github.com/yepengliu/TTME.git
@@ -98,7 +97,7 @@ with the paper. A successful run ends with `9/9 constructions verified`.
 ### Run a search
 
 Search and evaluation workers require **Linux**. Download a model snapshot at the
-[documented revision](docs/usage.md#models), then run a memory-enabled experiment:
+[documented revision](docs/usage.md#models). Then run a memory-enabled experiment:
 
 ```bash
 python -m pip install -c requirements.lock -e ".[programs,serve]"
@@ -108,8 +107,8 @@ scripts/local/run_local.sh \
   runs/ac2_memory_8b 16
 ```
 
-The launcher starts a model server, runs the search and stops the server when finished.
-All commands are run from the repository root.
+The launcher starts a model server and runs the search. When the search ends, the
+launcher stops the server. Run all commands from the repository root.
 
 For cluster jobs, resuming runs, model settings and experiment variants, see the
 [complete usage guide](docs/usage.md).
