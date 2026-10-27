@@ -1,7 +1,7 @@
 # Paper constructions
 
 This directory contains the nine **Ours (w/ TTME)** constructions reported in
-Tables 1 and 2 of the [paper](../paper.pdf).
+Tables 1 and 2 of the [paper](https://arxiv.org/abs/2610.32046).
 Each JSON file preserves the saved array at full precision. The table below uses
 the paper's six-decimal display precision.
 

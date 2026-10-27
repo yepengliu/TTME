@@ -12,7 +12,7 @@
 </p>
 
 <p align="center">
-  <a href="paper.pdf"><img src="docs/assets/paper-badge.svg" height="24" alt="Paper PDF"></a>
+  <a href="https://arxiv.org/abs/2610.32046"><img src="docs/assets/paper-badge.svg" height="24" alt="Paper on arXiv"></a>
   &nbsp;
   <a href="https://github.com/yepengliu/TTME"><img src="docs/assets/code-badge.svg" height="24" alt="Source code"></a>
   &nbsp;
@@ -62,7 +62,7 @@ whether a lower (↓) or higher (↑) score is better.
 |:--|--:|--:|--:|
 | Distill-Qwen3-8B | 0.948148 | 1.464224 | 0.579938 |
 
-Distill-Qwen3-8B denotes DeepSeek-R1-0528-Qwen3-8B. See the [paper](paper.pdf)
+Distill-Qwen3-8B denotes DeepSeek-R1-0528-Qwen3-8B. See the [paper](https://arxiv.org/abs/2610.32046)
 for the TTT and search-only comparisons.
 
 All **nine reported constructions** are included at full precision, with a
@@ -132,12 +132,15 @@ If you use TTME, please cite the paper.
 
 ```bibtex
 @misc{liu2026ttme,
-  title  = {Can Test-Time Memory Evolution Outperform Test-Time Training
-            for Scientific Discovery?},
-  author = {Liu, Yepeng and Chen, Shengmai and Zhao, Xuandong and Liu, Chengzhi
-            and Song, Dawn and Wang, Xin Eric and Bu, Yuheng},
-  year   = {2026},
-  url    = {https://github.com/yepengliu/TTME}
+  title         = {Can Test-Time Memory Evolution Outperform Test-Time Training
+                   for Scientific Discovery?},
+  author        = {Liu, Yepeng and Chen, Shengmai and Zhao, Xuandong and Liu, Chengzhi
+                   and Song, Dawn and Wang, Xin Eric and Bu, Yuheng},
+  year          = {2026},
+  eprint        = {2610.32046},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.AI},
+  url           = {https://arxiv.org/abs/2610.32046}
 }
 ```
 

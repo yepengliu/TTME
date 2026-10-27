@@ -1,5 +1,5 @@
 # Source distribution: the package plus everything needed to configure, launch, test and check runs.
-include README.md paper.pdf LICENSE NOTICE requirements.lock .gitattributes .gitignore
+include README.md LICENSE NOTICE requirements.lock .gitattributes .gitignore
 graft LICENSES
 graft docs
 graft configs
