@@ -27,17 +27,7 @@
   <a href="#citation">Citation</a></sub>
 </p>
 
-**Test time (TT)** is the stage when a pretrained model solves a target problem.
-In scientific discovery, the model generates candidate programs. The system runs
-these programs and evaluates the resulting constructions.
-
-**Test-Time Training (TTT)** updates model weights at test time. In the frameworks
-studied in our [paper](https://arxiv.org/abs/2610.32046), reinforcement learning uses
-evaluation results to update the weights. These updates require additional computation.
-
-**Test-Time Memory Evolution (TTME)** updates external memory at test time. The model
-weights remain fixed. TTME uses execution feedback to update practical guidelines.
-It stores and adapts successful strategies to guide later searches.
+Recent test-time training (TTT) frameworks have enabled open-weight large language models (LLMs) to outperform inference-only frameworks powered by frontier models on scientific discovery tasks. However, TTT introduces additional computational cost for online weight updates during the discovery process, making computational efficiency an important consideration when scaling to larger models. This motivates us to explore an efficient test-time adaptation method for scientific discovery. We introduce Test-Time Memory Evolution (TTME), a plug-and-play test-time adaptation method, as an alternative to TTT. TTME continually updates the external memory by distilling the experience to guide subsequent discovery without updating model weights. To have a clean comparison, we evaluate TTME and TTT under the same discovery framework, replacing only the test-time adaptation method.  Our evaluation shows that TTME outperforms TTT on all five mathematical tasks, while reducing computational cost by $82.8$-$84.6\%$ in FLOPs and $47.7$-$58.4\%$ in runtime. These results establish TTME as an effective and computationally efficient alternative to TTT in the evaluated discovery settings.
 
 ## Overview
 
